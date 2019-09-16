@@ -1,4 +1,4 @@
-export set_mode, get_mode, set_pull_up_down, set_PWM_dutycycle, set_PWM_frequency, set_PWM_range
+export set_mode, get_mode, set_pull_up_down, set_PWM_dutycycle, set_PWM_frequency, set_PWM_range, get_PWM_dutycycle, get_PWM_frequency, get_PWM_range
 
 
 
@@ -72,8 +72,6 @@ function _u2i(x::UInt32)
    if x < 2^16
       v = Int(x)
    else
-      println("exception uint: ", x, " ", typeof(x))
-      println("2^32-x: ", 2^32-x, " ", typeof(2^32-x))
       if exceptions
           error(error_text(-Int(2^32-x)))
       end
