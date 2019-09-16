@@ -73,7 +73,7 @@ function _u2i(x::UInt32)
       v = Int(x)
    else
       println("exception uint: ", x, " ", typeof(x))
-      println("x-2^32: ", x-2^32)
+      println("x-2^32: ", x-2^32, " ", typeof(x-2^32))
       if exceptions
           error(error_text(Int(x - 2^32)))
       end
