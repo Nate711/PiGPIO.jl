@@ -69,12 +69,12 @@ is negative it indicates an error.  On error a pigpio
 exception will be raised if exceptions is true.
 """
 function _u2i(x::UInt32)
-   if x < 2^32
+   if x < 2^16
       v = Int(x)
    else
-      println("exception uint: ", x)
+      println("exception uint: ", x, " ", typeof(x))
       if exceptions
-          error(error_text(Int(x - 2^64)))
+          error(error_text(Int(x - 2^32)))
       end
    end
    return v
