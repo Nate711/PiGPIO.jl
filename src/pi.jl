@@ -1,4 +1,4 @@
-export set_mode, get_mode, set_pull_up_down
+export set_mode, get_mode, set_pull_up_down, set_PWM_dutycycle, set_PWM_frequency, set_PWM_range
 
 
 
