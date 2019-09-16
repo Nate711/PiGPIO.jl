@@ -515,7 +515,6 @@ set_PWM_range(pi, 9, 3000) # now 750 1/4, 1500 1/2, 2250 3/4 on
 ...
 """
 function set_PWM_range(self::Pi, user_gpio, range_)
-    @code_warntype _u2i(_pigpio_command(self.sl, _PI_CMD_PRS, user_gpio, range_))
     return _u2i(_pigpio_command(self.sl, _PI_CMD_PRS, user_gpio, range_))
 end
 
