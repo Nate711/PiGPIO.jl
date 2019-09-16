@@ -37,10 +37,10 @@ level not 0-1
 function error_text(errnum)
     for e in _errors
         if e[1] == errnum
-           return e[2]
+           return e[2]::String
        end
     end
-    return "unknown error ($errnum)"
+    return "unknown error ($errnum)"::String
 end
 
 """
